@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Introduction to the objects
+        </title>
+        <script type="text/javascript">
+        function  validate()
+        {
+            var text=document.getElementById("uname").value;
+           // var password=document.getElementById("pass");
+
+           var regx= /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9]+).([a-z]{2,20})(. [a-z]{2,8})$/;
+
+            if(regx.test(text)){
+
+                document.getElementById("lbluser").innerHTML="valid";
+                document.getElementById("lbluser").style.visibility="visible";
+                document.getElementById("lbluser").style.color="green";
+
+            }
+            else {
+                document.getElementById("lbluser").innerHTML="Invalid";
+                document.getElementById("lbluser").style.visibility="visible";
+                document.getElementById("lbluser").style.color="red";
+            }
+
+        }
+        </script>
+    </head>
+    <body>
+        <form >
+            <input id="uname" placeholder="Email" type="text"/>
+            <br>
+            <label id ="lbluser" style="color:red;visibility: hidden;" > Please enter valid email</label>
+            <br>
+            <br>
+            <!-- <input id="pass" placeholder="Password" type="text"/>
+            <br>
+            <br> -->
+
+            <button onclick ="validate()" type="button"> Submit </button>
+        </form>
+    </body>
+</html>

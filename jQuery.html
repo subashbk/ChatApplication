@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            set up jQurey
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      
+        <h2>Setting up jQuery</h2>
+        <div id="id1" class="firstDev">
+            <p> This is the first paragraph in first division</p>
+            <p> This is the second paragraph in first division</p>
+        </div>
+        <div id="id2" class="firstDev">
+       
+                <p> This is the third paragraph in second division</p>
+            
+        </div>
+        <div id="id3" class="firstDev">
+            <ul>
+                <li>list item 1 </li>
+                <li>list item 2 </li>
+                <li>list item 3 </li>
+                <li>list item 4 </li>
+            </ul>
+        </div>
+
+        <button  id="btn1">
+            Click me
+        </button>
+        <button  id="btn2">
+            Click me 2
+        </button>
+    </body>
+    <script
+  
+<script src="jQuery/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+
+    $(document).ready(function(){
+
+
+        $("#btn1").mouseenter(fn1);
+        $("#btn1").mouseleave(fn2);
+
+        $("#btn2").hover(fn1,fn2);
+
+         
+       function fn1(){
+       $("#id1").fadeOut();
+}
+      function fn2(){
+    $("#id1").fadeIn();
+      }
+        
+    });
+
+
+</script>
+</html>

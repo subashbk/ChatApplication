@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Timiing Function
+        </title>
+        <script type="text/javascript">
+        var width=200;
+        var difference=2;
+        var intervalID=0;
+        //document.getElementById("img1").style.width=width;
+
+
+        function increase(){
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomIn,20);
+          
+        }
+
+
+        function decrease(){
+            clearInterval(intervalID);
+            intervalID=setInterval(zoomOut,20);
+           
+        }
+
+
+        function zoomIn(){
+
+            if(width<300){
+                width= width+difference;
+                document.getElementById("img1").style.width=width;
+            
+            }else{
+                clearInterval(intervalID);
+            }
+        }
+        function zoomOut(){
+
+if(width>200){
+    width= width-difference;
+    document.getElementById("img1").style.width=width;
+
+}else{
+    clearInterval(intervalID);
+}
+}
+
+        </script>
+    </head>
+    <body>
+     <br>
+     <br>
+     <img onmouseover="increase()" onmouseout="decrease()"  id="img1" src="images/Subash.jpg" width="200"/>
+     
+    </body>
+</html>
